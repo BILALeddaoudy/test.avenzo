@@ -1,156 +1,94 @@
-:root {
-  --navy: #2F4156;
-  --teal: #567C8D;
-  --beige: #F5EFEB;
-  --skyBlue: #C8D9E6;
-  --white: #FFFFFF;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="description" content="AVENZO Morocco - Quality and Innovation">
+  <meta name="theme-color" content="#2F4156">
+  <title>AVENZO Morocco - Landing Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <!-- Removed duplicate viewport meta tag here -->
+    <a href="#" class="logo">AVENZO.morocco</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 12h18M3 6h18M3 18h18"/>
+      </svg>
+    </button>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <div class="hero-logo-container">
+      <img src="c:\Users\hp\Downloads\logo1-removebg-preview.png" alt="AVENZO Morocco Logo" class="hero-logo">
+    </div>
+    <h1>Welcome to AVENZO Morocco</h1>
+    <p>We bring you innovation and quality with every product.</p>
+    <a href="#products" class="btn">Discover Products</a>
+  </section>
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-}
+  <section id="about" class="about-section">
+    <h2>About Us</h2>
+    <div class="about-content">
+      <div class="about-company">
+        <h3>Our Company</h3>
+        <p>AVENZO.morocco is a dynamic company founded in 2025 by Bilal ED-Daoudi, Ismail Ntayeba, and Anas Tata. It offers a wide range of products and services across multiple industries, focusing on quality, innovation, and customer satisfaction. With a fresh vision and strong leadership, AVENZO.morocco aims to grow as a trusted name in the Moroccan and global market.</p>
+      </div>
+    
+    </div>
+  </section>
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
+  <section id="products" class="products-section">
+    <h2>Our Product Categories</h2>
+    <p>Our product category focuses on fun robotics that combine entertainment, learning, and innovative technology in one experience.</p>
+    <div class="product-cards">
+      <div class="product-card">
+        <img src="c:\Users\hp\Desktop\erik.png" alt="Fun" class="product-image">
+        <h2>ERIK</h2>
+        <p>ERIK is an emotional robot designed to understand and respond to its surroundings, creating natural and empathetic interactions with people.</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hp\Downloads\WhatsApp_Image_2025-05-19_at_17.10.29_216b1a70-removebg-preview (1).png" alt="robot" class="product-image">
+        <h2>ALICE</h2>
+        <p>$</p>
+      </div>
+      <div class="product-card">
+        <img src="c:\Users\hp\Downloads\BMO_in_3D_Realism__2_-removebg-preview.png" alt="robot" class="product-image">
+        <h2>BMO</h2>
+        <p>Track your fitness and stay connected with our stylish smartwatches.</p>
+      </div>
+  </section>
 
-body {
-  background: var(--beige);
-  color: var(--navy);
-  line-height: 1.6;
-  font-family: 'Montserrat', sans-serif;
-  overflow-x: hidden;
-  width: 100%;
-}
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>We would love to hear from you! Please fill out the form below, and we’ll get back to you as soon as possible.</p>
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Enter your message" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
-header {
-  padding: 1rem;
-  background: var(--white);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(47, 65, 86, 0.07);
-}
+  <footer>
+    <p>&copy; 2025 AVENZO.morocco. All rights reserved.</p>
+  </footer>
 
-.logo {
-  display: inline-block;
-  font-size: 0.75rem;        /* Smaller text */
-  font-weight: 700;
-  color: var(--navy);
-  text-decoration: none;
-  padding: 0.25rem 0.75rem;  /* Padding to give it a rectangle shape */
-  border: 2px solid var(--navy); /* Optional: adds rectangle border */
-  border-radius: 0.25rem;    /* Slightly rounded corners */
-  background-color: white;   /* Or any background color */
-}
-
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
-nav a {
-  text-decoration: none;
-  color: var(--navy);
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-  border-radius: 4px;
-}
-
-nav a:hover {
-  background: var(--skyBlue);
-  color: var(--navy);
-}
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-  background: var(--skyBlue);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-logo-container {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  margin: 0 auto 1.5rem;
-  position: relative;
-}
-
-.hero-logo {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  background: none;
-}
-
-
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin: 1rem auto;
-  color: var(--navy);
-  font-weight: 700;
-  max-width: 800px;
-}
-
-.hero p {
-  font-size: clamp(1rem, 3vw, 1.25rem);
-  margin: 1rem auto;
-  max-width: 600px;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.8rem 1.8rem;
-  background: linear-gradient(90deg, var(--teal) 0%, var(--navy) 100%);
-  color: var(--white);
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(47, 65, 86, 0.15);
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(47, 65, 86, 0.2);
-}
-
-.products-section, .about-section, .contact-section {
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.contact-form, .about-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
+  <script src="script.js"></script>
+</body>
+</html>
