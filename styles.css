@@ -1,0 +1,156 @@
+:root {
+  --navy: #2F4156;
+  --teal: #567C8D;
+  --beige: #F5EFEB;
+  --skyBlue: #C8D9E6;
+  --white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--beige);
+  color: var(--navy);
+  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+header {
+  padding: 1rem;
+  background: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(47, 65, 86, 0.07);
+}
+
+.logo {
+  display: inline-block;
+  font-size: 0.75rem;        /* Smaller text */
+  font-weight: 700;
+  color: var(--navy);
+  text-decoration: none;
+  padding: 0.25rem 0.75rem;  /* Padding to give it a rectangle shape */
+  border: 2px solid var(--navy); /* Optional: adds rectangle border */
+  border-radius: 0.25rem;    /* Slightly rounded corners */
+  background-color: white;   /* Or any background color */
+}
+
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--navy);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background: var(--skyBlue);
+  color: var(--navy);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--skyBlue);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-logo-container {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  position: relative;
+}
+
+.hero-logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: none;
+}
+
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 1rem auto;
+  color: var(--navy);
+  font-weight: 700;
+  max-width: 800px;
+}
+
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.25rem);
+  margin: 1rem auto;
+  max-width: 600px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  background: linear-gradient(90deg, var(--teal) 0%, var(--navy) 100%);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(47, 65, 86, 0.15);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(47, 65, 86, 0.2);
+}
+
+.products-section, .about-section, .contact-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-form, .about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
